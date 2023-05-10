@@ -1,8 +1,11 @@
-import React from "react";
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import Headerpage from './objects/headerpage';
+import Slides from './objects/slides';
 import Footerpage from './objects/footerpage';
+
+import data from './assets/data/BoardData.json';
 
 // Swiper Styles
 import "swiper/css";
@@ -19,6 +22,7 @@ function App() {
     },
   };
 
+
   return (
     <>
 
@@ -27,28 +31,21 @@ function App() {
       <h1>Hellow World</h1>
 
       <Swiper navigation={true} modules={[Navigation, Pagination]} pagination={pagination} className="mySwiper">
-        <SwiperSlide>
-          <img src="https://source.unsplash.com/random?landscape,mountain" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://source.unsplash.com/random?landscape,night" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://source.unsplash.com/random?landscape,city" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://source.unsplash.com/random?landscape,dog" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://source.unsplash.com/random?landscape,cat" alt="" />
-        </SwiperSlide>
+
+        {
+          data.products.map((products, i) => {
+            return (
+              <SwiperSlide>
+                <Slides productTitle={products.title} productDescription={products.description} productImage={products.images[0]} />
+              </SwiperSlide>
+            );
+          })
+        }
+
       </Swiper>
 
       <Footerpage />
-
+      
     </>
 
   );
