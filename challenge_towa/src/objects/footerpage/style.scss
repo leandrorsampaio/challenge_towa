@@ -1,0 +1,31 @@
+@import '../../styles/1_settings/sizes';
+@import '../../styles/2_tools/viewports';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background: var(--color-tertiary);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0;
+
+    &__text {
+        color: var(--color-lighterAlt);
+        font-size: 0.8rem;
+        display: flex;
+        margin: 0;
+    }
+
+    &__link {
+        margin-left: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        .svgIcon {
+            height: 0.8rem;
+            fill: var(--color-lighterAlt);
+        }
+    }
+}
