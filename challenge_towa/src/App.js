@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import Headerpage from './objects/headerpage';
 import Slides from './objects/slides';
 import Footerpage from './objects/footerpage';
@@ -15,13 +15,6 @@ import "swiper/css/pagination";
 
 function App() {
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
-
 
   return (
     <>
@@ -30,10 +23,22 @@ function App() {
 
       <h1>Hellow World</h1>
 
-      <Swiper navigation={true} modules={[Navigation, Pagination]} pagination={pagination} className="mySwiper">
+      <Swiper 
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper">
 
         {
-          data.products.map((products, i) => {
+          data.products.slice(0, 5).map((products, i) => {
             return (
               <SwiperSlide>
                 <Slides productTitle={products.title} productDescription={products.description} productImage={products.images[0]} />
