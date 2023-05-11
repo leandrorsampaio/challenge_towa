@@ -15,9 +15,6 @@
     user-select: none;
     background-color: var(--color-primary);
     transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
     display: inline-flex;
 
     @include resize-to(small) {
@@ -47,18 +44,12 @@
         &:active {
             background-color: var(--color-darker);
             transition: all 0.5s ease-out;
-            transition: all 0.5s ease-out;
-            transition: all 0.5s ease-out;
-            transition: all 0.5s ease-out;
         }
     }
 
     &.--secondary {
         background-color: transparent;
         border-color: var(--color-white);
-        transition: all 0.5s ease-out;
-        transition: all 0.5s ease-out;
-        transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
 
         @media (hover: hover) {
@@ -68,9 +59,6 @@
                 color: var(--color-primary);
                 border-color: var(--color-primary);
                 background-color: var(--color-white);
-                transition: all 0.5s ease-out;
-                transition: all 0.5s ease-out;
-                transition: all 0.5s ease-out;
                 transition: all 0.5s ease-out;
             }
         }
