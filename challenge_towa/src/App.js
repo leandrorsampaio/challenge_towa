@@ -27,7 +27,7 @@ function App() {
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
+            delay: 250000000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -38,9 +38,9 @@ function App() {
           className="mySwiper">
 
           {
-            data.products.slice(0, 5).map((products, i) => {
+            data.products.slice(0, 5).map((products) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={products.id}>
                   <Slides productTitle={products.title} productDescription={products.description} productImage={products.images[0]} />
                 </SwiperSlide>
               );
