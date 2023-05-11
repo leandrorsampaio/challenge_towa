@@ -1,0 +1,44 @@
+.swiper-pagination {
+  position: absolute;
+  z-index: 10;
+  bottom: 5%;
+  left: 30px;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100px;
+  height: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &.swiper-pagination-bullet-active {
+
+    &::after {
+      background-color: var(--color-white);
+      content: '';
+      height: 3px;
+      border-radius: 3px;
+      display: flex;
+      animation-name: mymove;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+@keyframes mymove {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

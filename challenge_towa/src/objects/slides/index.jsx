@@ -8,14 +8,16 @@ const Slides = (props) => {
     return (
         <>
 
-            <div>
-                <div>
-                    <h2>{props.productTitle}</h2>
-                    <p>{props.productDescription}</p>
-                    <button>Learn more</button>
-                    <button>Contact</button>
+            <div className='slideContent'>
+                <div className='slideContent__info'>
+                    <h2 className='slideContent__title'>{props.productTitle}</h2>
+                    <p className='slideContent__text'>{props.productDescription}</p>
+                    <div className='slideContent__buttons'>
+                        <button>Learn more</button>
+                        <button>Contact</button>
+                    </div>
                 </div>
-                <img src={props.productImage} alt={props.productDescription} />
+                <img className='slideContent__image' src={props.productImage} alt={props.productDescription} />
             </div>
 
         </>

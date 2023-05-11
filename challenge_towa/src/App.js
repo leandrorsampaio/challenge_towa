@@ -9,8 +9,6 @@ import data from './assets/data/BoardData.json';
 
 // Swiper Styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 
 function App() {
@@ -21,33 +19,37 @@ function App() {
 
       <Headerpage />
 
-      <h1>Hellow World</h1>
+      
 
-      <Swiper 
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper">
+      <main className="mainWrapper">
 
-        {
-          data.products.slice(0, 5).map((products, i) => {
-            return (
-              <SwiperSlide>
-                <Slides productTitle={products.title} productDescription={products.description} productImage={products.images[0]} />
-              </SwiperSlide>
-            );
-          })
-        }
+        <Swiper 
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper">
 
-      </Swiper>
+          {
+            data.products.slice(0, 5).map((products, i) => {
+              return (
+                <SwiperSlide>
+                  <Slides productTitle={products.title} productDescription={products.description} productImage={products.images[0]} />
+                </SwiperSlide>
+              );
+            })
+          }
+
+        </Swiper>
+
+      </main>
 
       <Footerpage />
       

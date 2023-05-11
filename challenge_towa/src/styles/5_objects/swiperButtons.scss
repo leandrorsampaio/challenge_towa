@@ -1,0 +1,42 @@
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  bottom: 5%;
+
+  &::after {
+    border-style: solid;
+    border-width: 0.18rem 0.18rem 0 0;
+    border-color: var(--color-white);
+    content: "";
+    display: inline-block;
+    height: 0.5rem;
+    position: relative;
+    vertical-align: top;
+    width: 0.5em;
+    border-radius: 0.18rem;
+  }
+}
+
+.swiper-button-next {
+  right: 30px;
+
+  &::after {
+    left: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.swiper-button-prev {
+  right: calc(30px + 50px);
+
+  &::after {
+    left: 0.25em;
+    transform: rotate(-135deg);
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}
