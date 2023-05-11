@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonComponent from '../buttonComponent';
+import { PropTypes } from "prop-types";
 import './style.scss'
 
 const Slides = (props) => {
@@ -21,5 +22,13 @@ const Slides = (props) => {
         </>
     );
 };
+
+
+Slides.propTypes = {
+    productTitle: PropTypes.string,
+    productDescription: PropTypes.string,
+    productImage: PropTypes.string 
+};
+
 
 export default Slides;
