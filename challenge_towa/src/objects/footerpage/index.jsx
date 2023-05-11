@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactComponent as IconEnvelope } from '../../assets/icons/envelope.svg';
 import { ReactComponent as IconGithub } from '../../assets/icons/github.svg';
-import { ReactComponent as IcoLinkedinn } from '../../assets/icons/linkedin.svg';
+import { ReactComponent as IconLinkedinn } from '../../assets/icons/linkedin.svg';
 import './style.scss'
 
 const FooterPage = () => {
@@ -18,7 +18,7 @@ const FooterPage = () => {
                         <IconGithub className='svgIcon svgIcon--github' />
                     </a>
                     <a className='footer__link' href='https://www.linkedin.com/in/leandrosampaio/' target={'_blank'} rel='noreferrer'>
-                        <IcoLinkedinn className='svgIcon svgIcon--linkedin' />
+                        <IconLinkedinn className='svgIcon svgIcon--linkedin' />
                     </a>
                 </p>
             </footer>

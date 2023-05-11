@@ -1,3 +1,6 @@
+@import '../../styles/1_settings/sizes';
+@import '../../styles/2_tools/viewports';
+
 .button {
     display: flex;
     justify-content: center;
@@ -17,6 +20,7 @@
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
+    display: inline-flex;
 
     @include resize-to(small) {
         padding: 0px 1.2rem;
@@ -72,5 +76,12 @@
                 transition: all 0.5s ease-out;
             }
         }
+    }
+
+    &__icon {
+        width: 0.9rem;
+        fill: var(--color-white);
+        margin-left: 0.75rem;
+        margin-top: 1px;
     }
 }
