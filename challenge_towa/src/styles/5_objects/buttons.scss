@@ -1,3 +1,76 @@
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border: 2px solid var(--color-primary);
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-lighterAlt);
+    user-select: none;
     background-color: var(--color-primary);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+
+    @include resize-to(small) {
+        padding: 0px 1.2rem;
+        font-size: 1rem;
+        min-width: 6rem;
+        height: 2.4rem;
+    }
+
+    @include resize-to(medium) {
+        padding: 0px 1.2rem;
+        font-size: 0.8rem;
+        min-width: 6rem;
+        height: 2.2rem;
+    }
+
+    @include resize-to(large) {
+        padding: 0px 1rem;
+        font-size: 0.8rem;
+        min-width: 6rem;
+        height: 2.2rem;
+    }
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--color-darker);
+            -webkit-transition: all 0.5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
+        }
+    }
+
+    &.--secondary {
+        background-color: transparent;
+        border-color: var(--color-white);
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--color-primary);
+                border-color: var(--color-primary);
+                background-color: var(--color-white);
+                -webkit-transition: all 0.5s ease-out;
+                -moz-transition: all 0.5s ease-out;
+                -o-transition: all 0.5s ease-out;
+                transition: all 0.5s ease-out;
+            }
+        }
+    }
 }

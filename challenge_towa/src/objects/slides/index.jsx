@@ -13,8 +13,8 @@ const Slides = (props) => {
                     <h2 className='slideContent__title'>{props.productTitle}</h2>
                     <p className='slideContent__text'>{props.productDescription}</p>
                     <div className='slideContent__buttons'>
-                        <button>Learn more</button>
-                        <button>Contact</button>
+                        <button className='button'>Learn more</button>
+                        <button className='button --secondary'>Contact</button>
                     </div>
                 </div>
                 <img className='slideContent__image' src={props.productImage} alt={props.productDescription} />
