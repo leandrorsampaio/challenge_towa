@@ -10,10 +10,10 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 15px;
+        padding: $space-sm $space-md;
         margin: 0 auto;
 
-        @include resize-to(large) {
+        @include resize-to(until-small) {
             width: 90%;
         }
     }
@@ -26,7 +26,7 @@
     }
     
     &__profileWrapper {
-        padding-left: 0.5rem;
+        padding-left: $space-xs;
     }
 
     &__profileText {
@@ -34,13 +34,17 @@
         color: var(--color-lighterAlt);
 
         &.--name {
-            font-size: 1rem;
+            font-size: $space-sm;
         }
 
         &.--role {
             font-size: 0.8rem;
             margin-top: 0.2rem;
             font-style: italic;
+        }
+
+        @include resize-to(until-small) {
+            display: none;
         }
     }
     

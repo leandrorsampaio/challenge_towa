@@ -17,21 +17,21 @@
     transition: all 0.5s ease-out;
     display: inline-flex;
 
-    @include resize-to(small) {
+    @include resize-to(until-small) {
         padding: 0 1.2rem;
         font-size: 1rem;
         min-width: 6rem;
         height: 2.4rem;
     }
 
-    @include resize-to(medium) {
+    @include resize-to(until-large) {
         padding: 0 1.2rem;
         font-size: 0.8rem;
         min-width: 6rem;
         height: 2.2rem;
     }
 
-    @include resize-to(large) {
+    @include resize-to(start-from-large) {
         padding: 0 1rem;
         font-size: 0.8rem;
         min-width: 6rem;

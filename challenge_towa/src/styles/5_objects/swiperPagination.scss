@@ -2,17 +2,40 @@
   position: absolute;
   z-index: 10;
   bottom: 5%;
-  left: 30px;
+
+  @include resize-to(start-from-large) {
+    left: $space-xxl;
+  }
+
+  @include resize-to(until-large) {
+    left: $space-lg;
+  }
+
+  @include resize-to(until-small) {
+    left: $space-sm;
+  }
 }
 
 .swiper-pagination-bullet {
   background-color: rgb(255 255 255 / 30%);
-  width: 100px;
-  height: 3px;
-  border-radius: 3px;
+  width: 5.5rem;
+  height: 0.3rem;
+  border-radius: 0.3rem;
   cursor: pointer;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: $space-sm;
+
+  @include resize-to(start-from-large) {
+    width: 8rem;
+  }
+
+  @include resize-to(until-large) {
+    width: 5.5rem;
+  }
+
+  @include resize-to(until-small) {
+    width: 4rem;
+  }
 
   &:last-of-type {
     margin-right: 0;
@@ -22,8 +45,8 @@
     &::after {
       background-color: var(--color-white);
       content: '';
-      height: 3px;
-      border-radius: 3px;
+      height: 0.3rem;
+      border-radius: 0.3rem;
       display: flex;
       animation-name: mymove;
       animation-duration: 5s;

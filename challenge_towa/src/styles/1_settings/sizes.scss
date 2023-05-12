@@ -1,4 +1,27 @@
-$screen-small-max:  480px;
-$screen-medium-min: 481px;
-$screen-medium-max: 768px;
-$screen-large-min:  769px;
+$screen-xs-min: 0;
+$screen-xs-max: 479px;
+
+$screen-sm-min: 480px;
+$screen-sm-max: 575px;
+
+$screen-md-min: 576px;
+$screen-md-max: 767px;
+
+$screen-lg-min: 768px;
+$screen-lg-max: 991px;
+
+$screen-xl-min: 992px;
+$screen-xl-max: 1199px;
+
+$screen-xxl-min: 1200px;
+$screen-xxl-max: 1800px;
+
+
+// Margins
+
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 2.5rem;
+$space-xxl: 3rem;

@@ -1,3 +1,5 @@
+@import '../../styles/1_settings/sizes';
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -16,7 +18,7 @@
     }
 
     &__link {
-        margin-left: 0.5rem;
+        margin-left: $space-xs;
         display: flex;
         align-items: center;
 

@@ -3,7 +3,11 @@
   position: absolute;
   z-index: 10;
   cursor: pointer;
-  bottom: 5%;
+  bottom: 3.5%;
+
+  @include resize-to(until-small) {
+    display: none; 
+  }
 
   &::after {
     border-style: solid;
@@ -11,16 +15,23 @@
     border-color: var(--color-white);
     content: "";
     display: inline-block;
-    height: 0.5rem;
+    height: $space-xs;
     position: relative;
     vertical-align: top;
-    width: 0.5em;
+    width: $space-xs;
     border-radius: 0.18rem;
   }
 }
 
 .swiper-button-next {
-  right: 30px;
+
+  @include resize-to(start-from-large) {
+    right: $space-xxl;
+  }
+
+  @include resize-to(until-large) {
+    right: $space-lg;
+  }
 
   &::after {
     left: 0;
@@ -29,7 +40,16 @@
 }
 
 .swiper-button-prev {
-  right: calc(30px + 50px);
+  right: calc($space-xxl + 3rem);
+
+  @include resize-to(start-from-large) {
+    right: calc($space-xxl + 3rem);
+  }
+
+  @include resize-to(until-large) {
+    right: calc($space-lg + 3rem);
+  }
+
 
   &::after {
     left: 0.25em;

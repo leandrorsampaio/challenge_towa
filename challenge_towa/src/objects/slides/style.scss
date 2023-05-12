@@ -1,3 +1,6 @@
+@import '../../styles/1_settings/sizes';
+@import '../../styles/2_tools/viewports';
+
 .slideContent {
     display: block;
     width: 100%;
@@ -23,16 +26,30 @@
         align-items: flex-start;
         justify-content: flex-start;
         bottom: 20%;
-        left: 30px;
         max-width: 70%;
         z-index: 15;
+
+        @include resize-to(start-from-large) {
+            max-width: 70%;
+            left: $space-xxl;
+        }
+
+        @include resize-to(until-large) {
+            max-width: 85%;
+            left: $space-lg;
+        }
+
+        @include resize-to(until-small) {
+            max-width: calc(100% - $space-sm - $space-sm);
+            left: $space-sm;
+        }
     }
 
     &__title {
         font-weight: 600;
         font-size: 2rem;
         line-height: calc(2rem + 1rem);
-        margin-bottom: 0.5rem;
+        margin-bottom: $space-xs;
         text-align: left;
         color: var(--color-white);
     }
@@ -46,10 +63,20 @@
     }
 
     &__buttons {
-        margin-top: 1.5rem;
+        margin-top: $space-md;
+
+        @include resize-to(until-small) {
+            display: flex;
+            flex-direction: column;
+        }
 
         .--secondary {
-            margin-left: 1rem;
+            margin-left: $space-sm;
+
+            @include resize-to(until-small) {
+                margin-left: 0;
+                margin-top: $space-sm;
+            }
         }
     }
 
