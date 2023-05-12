@@ -4,7 +4,6 @@ import { Autoplay, Navigation, Pagination } from "swiper";
 import Headerpage from './objects/headerpage';
 import Slides from './objects/slides';
 import Footerpage from './objects/footerpage';
-
 import data from './assets/data/BoardData.json';
 
 // Swiper Styles
@@ -19,15 +18,13 @@ function App() {
 
       <Headerpage />
 
-      
-
-      <main className="mainWrapper">
+            <main className="mainWrapper">
 
         <Swiper 
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 250000000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -38,7 +35,7 @@ function App() {
           className="mySwiper">
 
           {
-            data.products.slice(0, 5).map((products) => {
+            data.products.slice(0, 4).map((products) => {
               return (
                 <SwiperSlide key={products.id}>
                   <Slides productTitle={products.title} productDescription={products.description} productImage={products.images[0]} />
